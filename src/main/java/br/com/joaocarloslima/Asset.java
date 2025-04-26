@@ -10,8 +10,8 @@ public abstract class Asset {
   
        
     public Asset(int x, int y, Imagem imagemView, int velocidade, Direcao direcao) {
-        this.x = x;
-        this.y = y;
+        this.x = 0;
+        this.y = 640-50;
         this.imagemView = imagemView;
         this.velocidade = velocidade;
         this.direcao = direcao;
@@ -82,5 +82,11 @@ public abstract class Asset {
                 this.x += this.velocidade;
                 break;
         }
+        /* public boolean colidiuCom(Asset asset) {
+            return this.x < asset.getX() + asset.getImagemView() &&
+                   this.x + this.imagemView. > asset.getX() &&
+                   this.y < asset.getY() + asset.getImagemView().getAltura() &&
+                   this.y + this.imagemView.getAltura() > asset.getY();
+        } */
     }
 }
